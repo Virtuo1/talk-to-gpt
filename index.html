@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Talk to GPT</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="controls">
+                <h1>Talk to GPT</h1>
+                <select id="modelSelector"></select>
+                <select id="voiceSelector"></select>
+                <div class="button-container">
+                    <button id="recordingButton">Record</button>
+                    <button id="openSettings">Settings</button>
+                </code>
+                <audio id="audioPlayer" src=""></audio>
+            </div>
+        </header>
+        <div id="responseDiv">
+        </div>
+        <div id="settings" class="settings-container">
+            <div class="settings message">
+                Add elevenlabs.io and OpenAI API keys to start speaking
+                <br />
+                <input type="text" id="openaiApiKey" placeholder="OpenAI API Key" />
+                <input type="text" id="elevenlabsApiKey" placeholder="Elevenlabs API Key" />
+                <br />
+                <button id="settingsAccept">Done</button>
+            </div>
+        </div>
+        <script type="module" src="/app.js"></script>
+        <script type="module" src="/modules/ui.js"></script>
+        <script type="module" src="/modules/openai.js"></script>
+        <script type="module" src="/modules/elevenlabs.js"></script>
+    </body>
+</html>
